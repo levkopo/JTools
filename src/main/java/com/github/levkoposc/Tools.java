@@ -1,4 +1,4 @@
-package com.levkopo.tools;
+package com.github.levkoposc;
 
 public final class Tools {
     public static FileTools file = new FileTools();

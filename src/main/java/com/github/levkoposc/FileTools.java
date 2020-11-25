@@ -1,8 +1,8 @@
-package com.levkopo.tools;
+package com.github.levkoposc;
 
 import java.io.*;
 import java.util.Scanner;
-import static com.levkopo.tools.Tools.*;
+import static com.github.levkoposc.Tools.*;
 
 public final class FileTools {
 

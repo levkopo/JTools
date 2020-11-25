@@ -1,4 +1,4 @@
-import static com.levkopo.tools.Tools.*;
+import static com.github.levkoposc.Tools.*;
 
 public class HashTest {
 

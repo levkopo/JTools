@@ -1,5 +1,5 @@
-package com.levkopo.tools;
-import static com.levkopo.tools.Tools.*;
+package com.github.levkoposc;
+import static com.github.levkoposc.Tools.*;
 
 public final class LogsTools {
     private String path = null;
