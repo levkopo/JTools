@@ -1,7 +1,11 @@
 package com.github.levkoposc;
+import java.io.PrintStream;
+import java.io.StringWriter;
+
 import static com.github.levkoposc.Tools.*;
 
 public final class LogsTools {
+
     private String path = null;
 
     public void err(Object object, String message){
