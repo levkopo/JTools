@@ -1,7 +1,5 @@
 package com.github.levkoposc;
 
-import com.sun.istack.internal.NotNull;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -28,7 +26,6 @@ public final class FileTools {
         }
     }
 
-    @NotNull
     public boolean addToFile(String path, String str){
         String content = read(path);
         if(content==null)
@@ -37,7 +34,6 @@ public final class FileTools {
         return write(path, content+str);
     }
 
-    @NotNull
     public boolean write(String path, String str) {
         try {
             File file = new File(path);

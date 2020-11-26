@@ -1,14 +1,11 @@
 package com.github.levkoposc;
 
-import com.sun.istack.internal.NotNull;
-
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public final class SecurityTools{
 
-    @NotNull
     public String md5(String st) {
         MessageDigest messageDigest;
         byte[] digest = new byte[0];
