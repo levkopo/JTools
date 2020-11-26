@@ -18,3 +18,6 @@ A library to simplify working with Java, which includes basic functions
   	compile 'com.github.levkoposc:jtools:0.1'
   }
   ```
+
+### Documentation
+Documentation is [here](https://github.com/levkoposc/JTools/wiki/Documentation)
