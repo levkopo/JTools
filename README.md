@@ -3,7 +3,7 @@
 
 A library to simplify working with Java, which includes basic functions
 
-####Install
+###Install
 + **With Maven**
   ```
   <dependency>
