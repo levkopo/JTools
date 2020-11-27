@@ -9,13 +9,13 @@ A library to simplify working with Java, which includes basic functions
   <dependency>
   	<groupId>com.github.levkoposc</groupId>
   	<artifactId>jtools</artifactId>
-  	<version>0.1</version>
+  	<version>0.2</version>
   </dependency>
   ```
 + **With Gradle**
   ```
   dependencies {
-  	compile 'com.github.levkoposc:jtools:0.1'
+  	compile 'com.github.levkoposc:jtools:0.2'
   }
   ```
 

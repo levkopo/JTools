@@ -12,7 +12,7 @@
 
     <groupId>com.github.levkoposc</groupId>
     <artifactId>jtools</artifactId>
-    <version>0.1</version>
+    <version>0.2</version>
 
     <name>JTools</name>
     <description>JTools is simple tools for Java</description>
