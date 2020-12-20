@@ -19,5 +19,19 @@ A library to simplify working with Java, which includes basic functions
   }
   ```
 
-### Documentation
-Documentation is [here](https://github.com/levkoposc/JTools/wiki/Documentation)
+# Quick start
+To quickly start working with the library, import Tools class with static fields
+```
+import static com.github.levkoposc.Tools.*;
+```
+OR extend your class from Tools (from 0.3)
+```
+public class Main extends Tools
+```
+
+# Available Tool Departments
+- [Main Tools](https://github.com/levkoposc/JTools/wiki/Main-tools)
+- [File Tools](https://github.com/levkoposc/JTools/wiki/File-Tools)
+- [Logs Tools](https://github.com/levkoposc/JTools/wiki/Logs-Tools)
+- [Security Tools](https://github.com/levkoposc/JTools/wiki/Security-Tools)
+- [Reflection Tools](https://github.com/levkoposc/JTools/wiki/Reflection-Tools)
