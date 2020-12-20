@@ -5,8 +5,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-import static com.github.levkoposc.Tools.logs;
-
 public final class FileTools {
 
     public String read(String path) {
@@ -21,8 +19,16 @@ public final class FileTools {
             myReader.close();
             return output.toString();
         }catch (Exception e){
-            logs.err(this, e.getMessage());
             return null;
+        }
+    }
+
+    public boolean isExists(String path){
+        try {
+            File myObj = new File(path);
+            return myObj.exists();
+        }catch (Exception e){
+            return false;
         }
     }
 
@@ -48,7 +54,6 @@ public final class FileTools {
 
             return true;
         } catch (IOException e) {
-            logs.err(this, e.getMessage());
             return false;
         }
     }

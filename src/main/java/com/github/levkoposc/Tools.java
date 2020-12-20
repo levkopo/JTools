@@ -1,13 +1,20 @@
 package com.github.levkoposc;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.github.levkoposc.atomic.AtomicRun;
 
-public final class Tools {
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
+
+public class Tools {
 
     /**TOOLS*/
     public static FileTools file = new FileTools();
-    public static LogsTools logs = new LogsTools();
     public static SecurityTools security = new SecurityTools();
     public static ReflectionTools reflection = new ReflectionTools();
 
@@ -22,7 +29,37 @@ public final class Tools {
         System.out.println(object);
     }
 
-    public Thread getThread(String name){
+    public static <T> T atomic(Supplier<T> supplier){
+        AtomicReference<T> atomic = new AtomicReference<>();
+        atomic.set(supplier.get());
+        return atomic.get();
+    }
+
+    public static <T, V> T atomic(Supplier<V> function, AtomicRun<T, V> atomicRun){
+        AtomicReference<T> atomic = new AtomicReference<>();
+        atomic.set(atomicRun.get(function.get()));
+
+        return atomic.get();
+    }
+
+    public static <T, V> T atomic(Function<Consumer<V>, ?> function, AtomicRun<T, V> atomicRun){
+        AtomicReference<T> atomic = new AtomicReference<>();
+        function.apply((value)->{
+            atomic.set(atomicRun.get(value));
+        });
+
+        return atomic.get();
+    }
+
+    public static <T> T[] array(T... array){
+        return array;
+    }
+
+    public static <T> List<T> list(T... list){
+        return Arrays.asList(list);
+    }
+
+    public static Thread getThread(String name){
         return threads.get(name);
     }
 
@@ -33,6 +70,7 @@ public final class Tools {
         });
 
         threads.put(name, thread);
+        thread.setName(name);
         thread.start();
     }
 }

@@ -2,11 +2,14 @@ package com.github.levkoposc;
 
 public final class MathTools {
 
-    public double average(int[] integers){
-        int sum = 0;
-        for(int integer: integers)
-            sum += integer;
+    public double average(int[] numbers){
+        if (numbers.length == 0)
+            return 0;
 
-        return (double) sum/integers.length;
+        double sum = 0;
+        for (int number : numbers)
+            sum += number;
+
+        return sum / numbers.length;
     }
 }

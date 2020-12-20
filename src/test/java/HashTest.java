@@ -1,9 +1,20 @@
-import static com.github.levkoposc.Tools.*;
+import com.github.levkoposc.Tools;
 
-public class HashTest {
+import java.util.function.Consumer;
+
+public class HashTest extends Tools {
 
     public static void main(String[] args) {
-        if(!file.addToFile("./file.txt", " world!"))
-            println("I can't create file =(");
+        boolean bool = atomic(HashTest::get, (i)->{
+            return i == 1;
+        });
+
+        println(bool);
+    }
+
+    public static boolean get(Consumer<Integer> consumer){
+        consumer.accept(1);
+
+        return true;
     }
 }
