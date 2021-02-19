@@ -1,5 +1,5 @@
 ![](images/JTools_logo.png)
-[![CircleCI](https://circleci.com/gh/levkoposc/JTools.svg?style=svg)](https://circleci.com/gh/levkoposc/JTools)
+[![CircleCI](https://circleci.com/gh/levkopo/JTools.svg?style=svg)](https://circleci.com/gh/levkoposc/JTools)
 
 A library to simplify working with Java, which includes basic functions
 
